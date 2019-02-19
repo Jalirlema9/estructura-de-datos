@@ -1,0 +1,68 @@
+//jalirlema
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+float ecuacionpositiva(float a,float b,float c);
+float ecuacionnegativa(float a,float b,float c);
+float discriminante(float a,float b,float c);
+
+void main()
+{
+  float a,b,c,dis,raiz1,raiz2;
+  do{
+  cout<<"Añadir valor de a:"<<endl;
+  cin>>a;
+  }while(a==0);
+
+  cout<<"Añadir valor de b:"<<endl;
+  cin>>b;
+
+  cout<<"Añadir valor de c:"<<endl;
+  cin>>c;
+
+   dis=discriminante(a,b,c);
+   if(discriminante<0)
+	  cout<<"no hay soluciones reales"<<endl;
+   if(discriminante>=0)
+	   ecuacionpositiva(a,b,c);
+       cout<<"la raiz1 es:"<<raiz1<<endl;
+       ecuacionnegativa(a,b,c);
+	   cout<<"la raiz2 es:"<<raiz2<<endl;
+  getch();
+}
+
+  float discriminante(float a,float b,float c)
+
+   {
+      float dis=0;
+      dis=b*b-4*a*c;
+
+	  return dis;
+
+   }
+
+   float ecuacionpositiva(float a,float b,float c)
+   {
+	  float raiz1;
+	   float dis=0;
+	    dis=b*b-4*a*c;
+       raiz1= (-b+sqrt(dis))/(2*a);
+	   cout<<"la raiz1 es:"<<raiz1<<endl;
+	   return raiz1;
+
+   }
+   
+   float ecuacionnegativa(float a,float b,float c)
+   {
+	   float raiz2;
+	   float dis=0;
+	    dis=b*b-4*a*c;
+	   raiz2= (-b-sqrt(dis))/(2*a);
+	   cout<<"la raiz2 es:"<<raiz2<<endl;
+	   return raiz2;
+   }
