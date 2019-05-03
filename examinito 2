@@ -1,0 +1,114 @@
+#pragma once
+#include <string>
+#include <iostream>
+#define MAX 100
+using namespace std;
+class pila
+{
+private:
+	int V[MAX];
+	int anio;
+	string placa;
+    string chasis;
+	string marca;
+	string modelo;
+	int tope;
+public:
+	pila(void);
+	~pila(void);
+	bool apilardatos(string _placa,string _chasis,string _marca,string _modelo,int _anio);
+	bool verificardatos(void);
+};
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+#include "StdAfx.h"
+#include "pila.h"
+#define MAX 100
+
+
+pila::pila()
+{
+	tope=-1;
+}
+
+
+pila::~pila()
+{
+}
+
+bool pila::apilardatos(string _placa,string _chasis,string _marca,string _modelo,int _anio)
+{
+	placa=_placa;
+	chasis=_chasis;
+	marca=_marca;
+	modelo=_modelo;
+	anio=_anio;
+  bool k=true;
+	 if(tope==MAX-1)
+	  { return false;
+      }
+	  else 
+	  { tope++;
+	    V[tope]=placa,chasis,marca,modelo,anio;
+	    return k=true;
+	  }
+}
+bool pila::verificardatos()
+{
+	bool k=true;
+	if(tope==MAX-1)
+	{
+		return k=true;
+	}
+	else 
+	{ 
+		return k=false;
+	}
+}
+---------------------------------------------------------------------------------------------------------------------------------
+// examensito.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "pila.h"
+#define MAX 100
+
+using namespace std;
+
+void main()
+{
+    int V[MAX];
+	int anio;
+	string placa;
+    string chasis;
+	string marca;
+	string modelo;
+	int tope;
+	 cout<<"ingrese anio"<<endl;
+	 cin>>anio;
+	 cout<<"ingrese placa"<<endl;
+	 cin>>placa;
+	 cout<<"ingrese chasis"<<endl;
+	 cin>>chasis;
+	 cout<<"ingrese marca"<<endl;
+	 cin>>marca;
+	 cout<<"ingrese modelo"<<endl;
+	 cin>>modelo;
+	 getch();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
