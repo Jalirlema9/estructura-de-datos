@@ -15,6 +15,7 @@ public:
 	void contarMinuscula();
 	int getMinusculas();
 };
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #include "StdAfx.h"
 #include "Ejercicio13.h"
@@ -54,8 +55,7 @@ int Ejercicio13::getMinusculas(){
 
 	return minuscula;
 }
-// Ejercisio.cpp : Defines the entry point for the console application.
-//
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #include "stdafx.h"
 #include "Ejercicio13.h"
