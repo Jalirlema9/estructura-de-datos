@@ -14,6 +14,7 @@ public:
     void sumarmat(int _mat1[10][10],int _mat2[10][10]);
 	void transpuesta(int _mat1[MAX][MAX]);
 };
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 #include "StdAfx.h"
 #include "matriz.h"
@@ -83,9 +84,7 @@ n=aux;
 }
 
 
-// Matrices.cpp : Defines the entry point for the console application.
-//
-
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include "StdAfx.h"
 #include "Matriz.h"
 #include "iostream"
