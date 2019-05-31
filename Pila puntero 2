@@ -1,0 +1,63 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+using namespace std;
+
+class Nodo
+{
+public:
+  int dato;
+  string nombre;
+  string nombre1;
+  string nombre2;
+  double dato1;
+  Nodo *sig;
+};
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+#include "stdafx.h"
+#include "Nodo.h"
+#include "Pila.h"
+#include <iostream>
+#include <string>
+#include "conio.h"
+using namespace std;
+
+int main() {
+  Nodo nuevo;
+  Pila l;
+  int opcion;
+  do {
+    system("cls");
+    cout << "------Pila en lista enlazada-----" << endl;
+    cout << "[1]Apilar" << endl;
+    cout << "[2]Pop" << endl;
+    cout << "[3]Mostrar" << endl;
+    cout << "[4]Tamaño" << endl;
+    cout << "[0]Salir" << endl;
+    cout << "\nIngresa tu opcion: ";
+    cin >> opcion;
+    switch (opcion) {
+    case 1:
+      l.apilar();
+      break;
+    case 2:
+      l.pop();
+      break;
+    case 3:
+      l.mostrar();
+      break;
+    case 4:
+      l.tamaño();
+      break;
+    case 0:
+      return 0;
+      break;
+    default:
+      cout << "Por favor ingresa una opcion correcta.\n";
+      break;
+    }
+  } while (opcion!=0);
+  return 0;
+}
